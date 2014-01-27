@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cdS-zz-QSm">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="FLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J4I-NU-JOx"/>
+                        <viewControllerLayoutGuide type="bottom" id="UTd-8d-Lmb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8eu-b5-qtG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="camera.altitude">
+                                        <integer key="value" value="2300"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="dxa-Iy-HzN"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xdm-Yq-6If">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb5-5S-Acu">
+                                        <rect key="frame" x="12" y="26" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Profile"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPQ-dg-RXR">
+                                        <rect key="frame" x="280" y="25" width="28" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Add"/>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="W3e-DD-tcn">
+                                        <rect key="frame" x="87" y="26" width="147" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Free"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8eu-b5-qtG" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="7mD-cd-qB1"/>
+                            <constraint firstAttribute="trailing" secondItem="8eu-b5-qtG" secondAttribute="trailing" id="S2u-Xk-IJX"/>
+                            <constraint firstItem="UTd-8d-Lmb" firstAttribute="top" secondItem="8eu-b5-qtG" secondAttribute="bottom" id="orw-fA-s2x"/>
+                            <constraint firstItem="8eu-b5-qtG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="xRJ-7Z-gPa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WFD-2S-2Jk"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="mapView" destination="8eu-b5-qtG" id="GtV-fW-YoB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="73"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="mYe-SM-TmT">
+            <objects>
+                <viewController id="cdS-zz-QSm" customClass="FLLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="788-M3-Otr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yo7-En-GMQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hdy-MN-9Gg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIn-PT-Ahh">
+                                <rect key="frame" x="27" y="375" width="266" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="bDC-Wf-cBK"/>
+                                    <constraint firstAttribute="width" constant="266" id="vsJ-dU-X3i"/>
+                                </constraints>
+                                <state key="normal" image="Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonWasPressed:" destination="cdS-zz-QSm" eventType="touchUpInside" id="IBm-b8-Z3v"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Raccoon" translatesAutoresizingMaskIntoConstraints="NO" id="jyQ-TD-VcF">
+                                <rect key="frame" x="70" y="84" width="180" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="giY-DR-YF8"/>
+                                    <constraint firstAttribute="width" constant="180" id="kvo-m5-yli"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TextLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xj9-84-AK6">
+                                <rect key="frame" x="70" y="262" width="180" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vvU-6A-OqN">
+                                <rect key="frame" x="142" y="384" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60784313729999995" green="0.34901960780000002" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nIn-PT-Ahh" firstAttribute="top" secondItem="788-M3-Otr" secondAttribute="bottom" constant="355" id="0Fj-NA-34J"/>
+                            <constraint firstItem="jyQ-TD-VcF" firstAttribute="leading" secondItem="hdy-MN-9Gg" secondAttribute="leading" constant="70" id="GHv-bd-bXP"/>
+                            <constraint firstItem="jyQ-TD-VcF" firstAttribute="top" secondItem="788-M3-Otr" secondAttribute="bottom" constant="64" id="ZN7-gI-MLN"/>
+                            <constraint firstItem="nIn-PT-Ahh" firstAttribute="leading" secondItem="hdy-MN-9Gg" secondAttribute="leading" constant="27" id="ZRN-fP-DD8"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="vvU-6A-OqN" id="pe7-qh-v3f"/>
+                        <outlet property="loginButton" destination="nIn-PT-Ahh" id="M35-Oy-1Zp"/>
+                        <outlet property="logoImageView" destination="jyQ-TD-VcF" id="YWY-tx-hgC"/>
+                        <outlet property="logoImageViewVerticalConstraint" destination="ZN7-gI-MLN" id="IG8-yQ-FRU"/>
+                        <outlet property="nameImageView" destination="xj9-84-AK6" id="7uM-8u-MjY"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="ShowMapSegue" id="duW-OS-X6T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eKc-Dj-dIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="522" y="73"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Add" width="23" height="23"/>
+        <image name="Facebook" width="266" height="55"/>
+        <image name="Profile" width="28" height="28"/>
+        <image name="Raccoon" width="180" height="134"/>
+        <image name="TextLogo" width="180" height="44"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

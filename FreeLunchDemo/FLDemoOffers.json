@@ -1,0 +1,46 @@
+[ 
+    {
+        "businessName": "Sorrento's",
+        "offerDescription": "$5 pizzas...",
+        "durationDescription": "All day!",
+        "free": false,
+        "foodType": "Pizza",
+        "coordinate": [40.440403, -79.9564]
+    },
+ 
+    {
+        "businessName": "Primanti's",
+        "offerDescription": "Free beer with a sandwich.",
+        "durationDescription": "4:30pm - 6:30pm",
+        "free": false,
+        "foodType": "Sandwich",
+        "coordinate": [40.441471, -79.958127]
+    },
+ 
+    {
+        "businessName": "Gene's",
+        "offerDescription": "BUY ONE GET ONE BEER!",
+        "durationDescription": "5:00pm - 8:00pm",
+        "free": false,
+        "foodType": "Beer",
+        "coordinate": [40.439423, -79.956095]
+    },
+ 
+    {
+        "businessName": "William Pitt Union",
+        "offerDescription": "Free sandwiches from #SWUniPitt",
+        "durationDescription": "1:00pm",
+        "free": true,
+        "foodType": "Sandwich",
+        "coordinate": [40.44344, -79.954819]
+    },
+ 
+    {
+        "businessName": "Cathedral",
+        "offerDescription": "Free cookies in the lobby.",
+        "durationDescription": "8:00am",
+        "free": true,
+        "foodType": "Dessert",
+        "coordinate": [40.444295, -79.953204]
+    }
+]
